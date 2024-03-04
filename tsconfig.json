@@ -1,6 +1,15 @@
 {
   "compilerOptions": {
     "target": "es5",
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules",
+        "options": [
+          "*.module.css",
+          "*.module.scss"
+        ]
+      }
+    ],
     "lib": [
       "dom",
       "dom.iterable",

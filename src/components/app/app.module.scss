@@ -1,0 +1,93 @@
+.main-section {
+  display: flex;
+  margin-left: 100px;
+  margin-right: 100px;
+  justify-content: center;
+}
+
+.tickets-frame {
+  margin-top: 20px;
+  margin-left: 20px;
+  max-width: 640px;
+  width: 66%;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #DFE5EC;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 640px;
+}
+
+.stick {
+  width: 1px;
+  background-color: #DFE5EC;
+}
+
+.tab {
+  width: 50%;
+}
+
+.tab:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.tab:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.tab-title {
+  text-align: center;
+  vertical-align: center;
+  font-size: .5rem;
+}
+
+.tab:focus {
+  background-color: #2196F3;
+  color: #fff;
+  border: transparent;
+}
+
+.tab:active {
+  border: none;
+}
+
+.tab p {
+  border: transparent;
+}
+
+@media (min-width: 1175px) {
+  .main-section {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 800px) {
+  .main-section {
+    margin-left: 70px;
+    margin-right: 70px;
+  }
+}
+
+@media (max-width: 640px) {
+  .main-section {
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+
+  .tickets-frame {
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .main-section {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}

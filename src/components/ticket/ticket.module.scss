@@ -1,0 +1,57 @@
+.ticket {
+    margin: 0;
+}
+
+.ticket-header {
+    display: flex;
+    align-items: center;
+}
+
+.total-price {
+    height: 100%;
+    margin-right: auto;
+    font-size: 1rem;
+    color: #2196F3;
+}
+
+.logo {
+    width: 30%;
+}
+
+.logo-img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.ticket-body {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.ticket-part {
+    display: flex;
+    flex-direction: column;
+}
+
+.ticket-part span:first-child {
+    font-size: .5rem;
+    color: #A0B0B9;
+}
+
+.ticket-part span:nth-child(2) {
+    font-size: .5833rem;
+    color: #4A4A4A;
+}
+
+.ticket-part:first-child {
+    width: 40%;
+}
+
+.ticket-part:nth-child(2) {
+    width: 34%;
+}
+
+.ticket-part:last-child {
+    width: 26%;
+}

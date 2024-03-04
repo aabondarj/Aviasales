@@ -1,0 +1,22 @@
+.ticket-list {
+    margin: 20px 0 0 0;
+    padding: 0;
+    width: 100%;
+    max-width: 640px;
+}
+
+.ticket-item {
+    padding: 20px;
+    margin-bottom: 20px;
+    list-style: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px rgba(0, 0 , 0, 0.1);
+    max-width: 600px;
+    background-color: #fff;
+}
+
+@media (max-width: 640px) {
+    .ticket-item {
+        margin-bottom: 10px;
+    }
+}
