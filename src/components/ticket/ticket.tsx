@@ -48,7 +48,7 @@ const Ticket: React.FC<TicketProps> = ({ticket}) => {
         <span>{`${formatTime(ticket.segments["0"][`duration`])}`}</span>
       </div>
       <div className={styles[`ticket-part`]}>
-        <span>{`${(ticket.segments["0"][`stops`]).length} пересадки`}</span>
+        <span>{`${(ticket.segments["0"][`stops`]).length !== 0 ? (ticket.segments["0"][`stops`]).length : 'Без'} пересадки`}</span>
         <span>{`${(ticket.segments["0"][`stops`]).join(', ')}`}</span>
       </div>
 		</div>
@@ -62,7 +62,7 @@ const Ticket: React.FC<TicketProps> = ({ticket}) => {
         <span>{`${formatTime(ticket.segments["1"][`duration`])}`}</span>
       </div>
       <div className={styles[`ticket-part`]}>
-        <span>{`${(ticket.segments["1"][`stops`]).length} пересадки`}</span>
+        <span>{`${(ticket.segments["1"][`stops`]).length !== 0 ? (ticket.segments["1"][`stops`]).length : 'Без'} пересадки`}</span>
         <span>{`${(ticket.segments["1"][`stops`]).join(', ')}`}</span>
       </div>
 		</div>
