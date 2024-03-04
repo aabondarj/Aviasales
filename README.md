@@ -2,4 +2,4 @@
 
 ## Link for app
 
-[Aviasales](https://)
+[Aviasales](https://aviasales-ivory-nine.vercel.app/)
