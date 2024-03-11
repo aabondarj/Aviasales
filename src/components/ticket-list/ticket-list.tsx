@@ -60,75 +60,18 @@ const TicketList = () => {
     return filteredTickets.sort((a, b) => {
       if (filters.sortBy === 'price') {
         return (a.price - b.price);
-      } else {
+      } else if (filters.sortBy === 'duration') {
         const durationA = a.segments[0].duration + a.segments[1].duration;
         const durationB = b.segments[0].duration + b.segments[1].duration;
         return durationA - durationB;
+      } else if (filters.sortBy === 'optimal') {
+        const optimalValueA = a.price + (a.segments[0].stops.length + a.segments[1].stops.length) + (a.segments[0].duration + a.segments[1].duration);
+        const optimalValueB = b.price + (b.segments[0].stops.length + b.segments[1].stops.length) + (b.segments[0].duration + b.segments[1].duration);
+        return optimalValueA - optimalValueB;
       }
+      return 0;
     });
   }, [filteredTickets, filters.sortBy]);
-
-  const tikets: TicketApi[] = [{
-    price: 13000,
-    carrier: 'FV',
-    segments: [
-      {
-        origin: `MOW`,
-        destination: `HKT`,
-        date: `2024-09-28T13:24:13.511Z`,
-        stops: [`WWW`, `WWW`, `WWW`],
-        duration: 1010,
-      },
-      {
-        origin: `MOW`,
-        destination: `HKT`,
-        date: `2024-09-28T13:24:13.511Z`,
-        stops: [`WWW`, `WWW`],
-        duration: 1010,
-      }
-    ]
-  },
-  {
-    price: 13000,
-    carrier: 'FV',
-    segments: [
-      {
-        origin: `MOW`,
-        destination: `HKT`,
-        date: `2024-09-28T13:24:13.511Z`,
-        stops: [`WWW`, `WWW`, `WWW`],
-        duration: 1010,
-      },
-      {
-        origin: `MOW`,
-        destination: `HKT`,
-        date: `2024-09-28T13:24:13.511Z`,
-        stops: [`WWW`, `WWW`, `WWW`],
-        duration: 1010,
-      }
-    ]
-  },
-  {
-    price: 13000,
-    carrier: 'FV',
-    segments: [
-      {
-        origin: `MOW`,
-        destination: `HKT`,
-        date: `2024-09-28T13:24:13.511Z`,
-        stops: [`WWW`, `WWW`, `WWW`],
-        duration: 1010,
-      },
-      {
-        origin: `MOW`,
-        destination: `HKT`,
-        date: `2024-09-28T13:24:13.511Z`,
-        stops: [`WWW`, `WWW`, `WWW`],
-        duration: 1010,
-      }
-    ]
-  }
-]
 
   const elements = (
     sortedTickets.map((ticket) => {

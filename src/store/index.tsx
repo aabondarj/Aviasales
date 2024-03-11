@@ -4,7 +4,6 @@ import { TicketApi } from '../components/service/ticket-service';
 import filtersReducer from './filters-slice';
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
-// import { composeWithDevTools } from 'redux-devtools-extension';
 
 
 export interface RootState {

@@ -58,6 +58,11 @@
 
 .filtres-form label input[type="checkbox"]:hover {
   border-color: #2196F3;
+  cursor: pointer;
+}
+
+.filtres-form label {
+  cursor: pointer;
 }
 
 @media (max-width: 800px) {

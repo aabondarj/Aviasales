@@ -48,7 +48,7 @@ const filtersSlice = createSlice({
         state.allChecked = false;
       }
     },
-    changeSortBy(state, action: PayloadAction<'price'|'duration'>) {
+    changeSortBy(state, action: PayloadAction<'price'|'duration'|'optimal'>) {
       state.sortBy = action.payload
     },
     setTickets(state, action: PayloadAction<TicketApi[]>) {

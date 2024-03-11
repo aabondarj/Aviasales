@@ -24,7 +24,7 @@ const CheapTab = () => {
     ref={cheapTabRef}
     className={`${styles[`tab`]} ${sortBy === 'price' ? styles.selected : ''}`} 
     onClick={handleClick}
-    tabIndex={0}>
+    tabIndex={3}>
       <p className={styles[`tab-title`]}>САМЫЙ ДЕШЕВЫЙ</p>
     </div>
   );
